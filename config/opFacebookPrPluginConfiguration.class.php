@@ -18,7 +18,7 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     
   }
   
-  protected function listenToDiaryCreate($arguments)
+  public function listenToDiaryCreate($arguments)
   {
     $form = $arguments['actionInstance']->getVar("form");
     if($form && $form->getObject()->getId())
@@ -31,7 +31,7 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     }
   }
   
-  protected function listenToCommunityTopicCreate($arguments)
+  public function listenToCommunityTopicCreate($arguments)
   {
     $form = $arguments['actionInstance']->getVar("form");
     if($form && $form->getObject()->getId())
@@ -45,7 +45,7 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     }
   }
   
-  protected function listenToCommunityEventCreate($arguments)
+  public function listenToCommunityEventCreate($arguments)
   {
     $form = $arguments['actionInstance']->getVar("form");
     if($form && $form->getObject()->getId())
@@ -55,16 +55,16 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
       $params['%name%'] = $event->getName();
       $params['%community%'] = $event->getCommunity()->getName();
       $params['%member%'] = $event->getMember()->getName();
-      $this->publishFacebook('event', $params, '@communityEvent_show?id='.$topic->getId());
+      $this->publishFacebook('event', $params, '@communityEvent_show?id='.$event->getId());
     }
   }
   
-  protected function listenToCommunityEdit($arguments)
+  public function listenToCommunityEdit($arguments)
   {
     //pending...
   }
   
-  protected function publishFacebook($type, $params, $urlString)
+  public function publishFacebook($type, $params, $urlString)
   {
     sfContext::getInstance()->getConfiguration()->loadHelpers(array('Url', 'I18N'));
     $template = sfConfig::get('app_facebook_wallmessage_'.$type, '');
