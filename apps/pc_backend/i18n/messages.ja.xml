@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="">
+        <source>Saved.</source>
+        <target>更新しました。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Your application id and application secret are required.</source>
+        <target>先にFacebookのアプリケーションIDとアプリの秘訣を登録してください。</target>
+      </trans-unit>
+      <trans-unit id="">
+        <source>Authorization failed.</source>
+        <target>認証に失敗したか、認証が拒否されました。</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

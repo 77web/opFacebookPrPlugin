@@ -1,0 +1,7 @@
+op_facebook_pr_plugin_config:
+  url: /opFacebookPrPlugin/config
+  param: { module: opFacebookPrPlugin, action: config }
+
+op_facebook_pr_plugin_auth:
+  url: /opFacebookPrPlugin/authorize
+  param: { module: opFacebookPrPlugin, action: auth }

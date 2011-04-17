@@ -1,0 +1,6 @@
+all:
+  facebook:
+    wallmessage:
+      diary: "Diary %name% posted by %member%"
+      topic: "Topic %name% posted in %community% by %member%"
+      event: "Event %name% posted in %community% by %member%"
