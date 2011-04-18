@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="1">
+        <source>Diary %name% posted by %member%</source>
+        <target>%member%さんが%name%という日記を書きました。</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Topic %name% posted in %community% by %member%</source>
+        <target>%member%さんが%community%に%name%というトピックを投稿しました。</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Event %name% posted in %community% by %member%</source>
+        <target>%member%さんが%community%で%name%というイベントを開催します。</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
