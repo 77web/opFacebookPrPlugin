@@ -24,10 +24,13 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     if($form && $form->getObject()->getId())
     {
       $diary = $form->getObject();
-      $params = array();
-      $params['%name%'] = $diary->getTitle();
-      $params['%member%'] = $diary->getMember()->getName();
-      $this->publishFacebook('diary', $params, '@diary_show?id='.$diary->getId());
+      if(1 == $diary->getIsOpen())
+      {
+        $params = array();
+        $params['%name%'] = $diary->getTitle();
+        $params['%member%'] = $diary->getMember()->getName();
+        $this->publishFacebook('diary', $params, '@diary_show?id='.$diary->getId());
+      }
     }
   }
   
@@ -37,11 +40,14 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     if($form && $form->getObject()->getId())
     {
       $topic = $form->getObject();
-      $params = array();
-      $params['%name%'] = $topic->getName();
-      $params['%community%'] = $topic->getCommunity()->getName();
-      $params['%member%'] = $topic->getMember()->getName();
-      $this->publishFacebook('topic', $params, '@communityTopic_show?id='.$topic->getId());
+      if('public' == $topic->getCommunity()->getConfig('public_flag'))
+      {
+        $params = array();
+        $params['%name%'] = $topic->getName();
+        $params['%community%'] = $topic->getCommunity()->getName();
+        $params['%member%'] = $topic->getMember()->getName();
+        $this->publishFacebook('topic', $params, '@communityTopic_show?id='.$topic->getId());
+      }
     }
   }
   
@@ -51,11 +57,14 @@ class opFacebookPrPluginConfiguration extends sfPluginConfiguration
     if($form && $form->getObject()->getId())
     {
       $event = $form->getObject();
-      $params = array();
-      $params['%name%'] = $event->getName();
-      $params['%community%'] = $event->getCommunity()->getName();
-      $params['%member%'] = $event->getMember()->getName();
-      $this->publishFacebook('event', $params, '@communityEvent_show?id='.$event->getId());
+      if('public' == $event->getCommunity()->getConfig('public_flag'))
+      {
+        $params = array();
+        $params['%name%'] = $event->getName();
+        $params['%community%'] = $event->getCommunity()->getName();
+        $params['%member%'] = $event->getMember()->getName();
+        $this->publishFacebook('event', $params, '@communityEvent_show?id='.$event->getId());
+      }
     }
   }
   
