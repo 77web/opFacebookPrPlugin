@@ -6,12 +6,11 @@ OpenPNE3のSNS内での出来事をFacebookファンページに公開します�
 ・投稿前に日記、トピック・イベントの公開範囲をチェック（日記はWEB公開、トピとイベントは全体公開のみ）
 
 ■initial->0.9.0までの課題
-・テストを書く
 ・opDiaryPlugin,opCommunityTopicPluginとの依存性チェックを入れる？
-・daily reportの投稿内容を決める
 
 
 ■1.0.0までの課題
+・daily reportの投稿内容を決める
 ・community作成に対応？
 ・memberの登録に対応？
 ・monthly reportを投稿するように？
