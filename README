@@ -5,9 +5,6 @@ OpenPNE3のSNS内での出来事をFacebookファンページに公開します�
 ・日記・トピック・イベントの投稿時にFacebookファンページのウォールに通知
 ・投稿前に日記、トピック・イベントの公開範囲をチェック（日記はWEB公開、トピとイベントは全体公開のみ）
 
-■initial->0.9.0までの課題
-・opDiaryPlugin,opCommunityTopicPluginとの依存性チェックを入れる？
-
 
 ■1.0.0までの課題
 ・daily reportの投稿内容を決める

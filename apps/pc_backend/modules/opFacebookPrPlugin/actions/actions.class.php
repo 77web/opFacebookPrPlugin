@@ -91,12 +91,9 @@ class opFacebookPrPluginActions extends sfActions
       $t->set('opFacebookPrPlugin_fb_token', $token);
       return sfView::SUCCESS;
     }
-    else
-    {
-      $this->getUser()->setFlash('notice', 'Authorization failed.');
-      $next = 'op_facebook_pr_plugin_auth';
-    }
-    //$this->redirect($next);
+    
+    $this->getUser()->setFlash('notice', 'Authorization failed.');
+    $this->redirect('op_facebook_pr_plugin_auth');
   }
   
 
